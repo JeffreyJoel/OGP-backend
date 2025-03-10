@@ -1,3 +1,4 @@
+const express = require('express');
 const { getDeviceData } = require('../lib/mqtt-client');
 
 const app = express();

@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // API Endpoint to retrieve cached MQTT data
-app.get('/data', (req, res) => {
+app.get('/', (req, res) => {
     const { device_id } = req.query;
   
     try {

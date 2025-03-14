@@ -4,7 +4,7 @@ const Influx = require('influx');
 
 
 const influx = new Influx.InfluxDB({
-  host: '1b9d-105-27-122-2.ngrok-free.app', // Hostname only, without protocol
+  host: process.env.INFLUX_HOST,
   database: 'sensor_data',
   schema: [
     {
@@ -57,7 +57,7 @@ influx.getDatabaseNames()
   });
 
 
-const brokerUrl = 'tcp://6.tcp.eu.ngrok.io:17610';
+const brokerUrl = process.env.MQTT_BROKER_URL;
 const topic = 'esp32s3/data';
 
 

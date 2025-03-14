@@ -2,9 +2,9 @@
   "name": "ethers-rabbitmq-server",
   "version": "1.0.0",
   "description": "Sensor data application",
-  "main": "api/index.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node api/index.js",
+    "start": "node src/app.js",
     "dev": "vercel dev"
   },
   "dependencies": {
@@ -13,12 +13,10 @@
     "ethers": "^6.13.5",
     "express": "^4.21.2",
     "influx": "^5.9.7",
-    "mqtt": "^5.10.4"
+    "mqtt": "^5.10.4",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "vercel": "^30.0.0"
-  },
-  "engines": {
-    "node": ">=14.0.0"
   }
 }

@@ -1,0 +1,413 @@
+[
+    {
+      "type": "constructor",
+      "inputs": [
+        {
+          "name": "_protocolAddress",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "ADDITIONALITY_FACTOR",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "CREDIT_DECIMALS",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "NETWORK_THRESHOLD",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "OPERATOR_SPLIT",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "TIME_WINDOW",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "activeDeviceIds",
+      "inputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "outputs": [{ "name": "", "type": "bytes32", "internalType": "bytes32" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "activeDevices",
+      "inputs": [{ "name": "", "type": "bytes32", "internalType": "bytes32" }],
+      "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "balanceOf",
+      "inputs": [
+        { "name": "_address", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "balances",
+      "inputs": [{ "name": "", "type": "address", "internalType": "address" }],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "batchContributions",
+      "inputs": [
+        { "name": "", "type": "uint256", "internalType": "uint256" },
+        { "name": "", "type": "uint256", "internalType": "uint256" }
+      ],
+      "outputs": [
+        { "name": "deviceId", "type": "bytes32", "internalType": "bytes32" },
+        { "name": "minerWallet", "type": "address", "internalType": "address" },
+        {
+          "name": "kwhContribution",
+          "type": "uint96",
+          "internalType": "uint96"
+        },
+        { "name": "creditShare", "type": "uint128", "internalType": "uint128" }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "creditBatches",
+      "inputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "outputs": [
+        { "name": "id", "type": "uint32", "internalType": "uint32" },
+        { "name": "amount", "type": "uint128", "internalType": "uint128" },
+        {
+          "name": "energyGenerated",
+          "type": "uint96",
+          "internalType": "uint96"
+        },
+        { "name": "timestamp", "type": "uint64", "internalType": "uint64" },
+        { "name": "regionCode", "type": "uint32", "internalType": "uint32" }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "currentPeriodEnergy",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint96", "internalType": "uint96" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "currentPeriodStart",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint64", "internalType": "uint64" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "emissionFactors",
+      "inputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getBatchContributions",
+      "inputs": [
+        { "name": "_batchId", "type": "uint32", "internalType": "uint32" }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple[]",
+          "internalType": "struct CarbonCredit.DeviceContribution[]",
+          "components": [
+            {
+              "name": "deviceId",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "minerWallet",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "kwhContribution",
+              "type": "uint96",
+              "internalType": "uint96"
+            },
+            {
+              "name": "creditShare",
+              "type": "uint128",
+              "internalType": "uint128"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getCreditBatch",
+      "inputs": [
+        { "name": "_batchId", "type": "uint32", "internalType": "uint32" }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple",
+          "internalType": "struct CarbonCredit.CreditBatch",
+          "components": [
+            { "name": "id", "type": "uint32", "internalType": "uint32" },
+            { "name": "amount", "type": "uint128", "internalType": "uint128" },
+            {
+              "name": "energyGenerated",
+              "type": "uint96",
+              "internalType": "uint96"
+            },
+            { "name": "timestamp", "type": "uint64", "internalType": "uint64" },
+            {
+              "name": "regionCode",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "deviceIds",
+              "type": "bytes32[]",
+              "internalType": "bytes32[]"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getCreditBatchCount",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getCurrentPeriodStatus",
+      "inputs": [],
+      "outputs": [
+        { "name": "", "type": "uint64", "internalType": "uint64" },
+        { "name": "", "type": "uint96", "internalType": "uint96" },
+        { "name": "", "type": "uint256", "internalType": "uint256" }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getEmissionFactor",
+      "inputs": [
+        { "name": "_countryCode", "type": "uint32", "internalType": "uint32" }
+      ],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "lastDataHash",
+      "inputs": [{ "name": "", "type": "bytes32", "internalType": "bytes32" }],
+      "outputs": [{ "name": "", "type": "bytes32", "internalType": "bytes32" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "powerReadings",
+      "inputs": [{ "name": "", "type": "bytes32", "internalType": "bytes32" }],
+      "outputs": [
+        { "name": "minerWallet", "type": "address", "internalType": "address" },
+        {
+          "name": "kwhConsumption",
+          "type": "uint96",
+          "internalType": "uint96"
+        },
+        { "name": "timestamp", "type": "uint64", "internalType": "uint64" },
+        { "name": "countryCode", "type": "uint32", "internalType": "uint32" },
+        { "name": "dataHash", "type": "bytes32", "internalType": "bytes32" }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "protocol",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "contract OnGridProtocol"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "submitPowerReading",
+      "inputs": [
+        { "name": "_deviceId", "type": "bytes32", "internalType": "bytes32" },
+        {
+          "name": "_minerWallet",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "_kwhConsumption",
+          "type": "uint96",
+          "internalType": "uint96"
+        },
+        { "name": "_timestamp", "type": "uint64", "internalType": "uint64" },
+        { "name": "_countryCode", "type": "uint32", "internalType": "uint32" },
+        { "name": "_dataHash", "type": "bytes32", "internalType": "bytes32" }
+      ],
+      "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "totalSupply",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "updateEmissionFactor",
+      "inputs": [
+        { "name": "_countryCode", "type": "uint32", "internalType": "uint32" },
+        {
+          "name": "_emissionFactor",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "event",
+      "name": "CreditBatchCreated",
+      "inputs": [
+        {
+          "name": "batchId",
+          "type": "uint32",
+          "indexed": true,
+          "internalType": "uint32"
+        },
+        {
+          "name": "amount",
+          "type": "uint128",
+          "indexed": false,
+          "internalType": "uint128"
+        },
+        {
+          "name": "energyGenerated",
+          "type": "uint96",
+          "indexed": false,
+          "internalType": "uint96"
+        },
+        {
+          "name": "regionCode",
+          "type": "uint32",
+          "indexed": false,
+          "internalType": "uint32"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "CreditsAllocated",
+      "inputs": [
+        {
+          "name": "batchId",
+          "type": "uint32",
+          "indexed": true,
+          "internalType": "uint32"
+        },
+        {
+          "name": "operator",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint128",
+          "indexed": false,
+          "internalType": "uint128"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "PowerReadingSubmitted",
+      "inputs": [
+        {
+          "name": "deviceId",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "minerWallet",
+          "type": "address",
+          "indexed": false,
+          "internalType": "address"
+        },
+        {
+          "name": "kwhConsumption",
+          "type": "uint96",
+          "indexed": false,
+          "internalType": "uint96"
+        },
+        {
+          "name": "timestamp",
+          "type": "uint64",
+          "indexed": false,
+          "internalType": "uint64"
+        },
+        {
+          "name": "countryCode",
+          "type": "uint32",
+          "indexed": false,
+          "internalType": "uint32"
+        },
+        {
+          "name": "dataHash",
+          "type": "bytes32",
+          "indexed": false,
+          "internalType": "bytes32"
+        }
+      ],
+      "anonymous": false
+    }
+  ]
